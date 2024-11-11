@@ -21,5 +21,21 @@
         var height = image.height || 30;
     %>
 
-    <img src="<%= url %>" width="<%= width %>" height="<%= height %>" alt="User Avatar" class="avatar" data-avatar>
+    <!-- <img src="<%= url %>" width="<%= width %>" height="<%= height %>" alt="User Avatar" class="avatar" data-avatar> -->
+
+    <div class="menu-wrapper" data-menu-wrappper>
+        <button class="icon-btn" aria-label="My profile" data-ripple data-menu-toggler>
+            <img src="<%= url %>" width="<%= width %>" height="<%= height %>" alt="User Avatar" class="avatar" data-avatar>
+
+            <div class="state-layer"></div>
+        </button>
+
+        <%- include('./menu') %>
+    </div>
+
+    <%- include('./icon_btn', {
+        variant: 'clear',
+        icon: 'close',
+        dataAttr: 'data-search-clear'
+    }) %>
 </div>
