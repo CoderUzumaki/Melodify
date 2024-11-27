@@ -39,4 +39,4 @@ input:-webkit-autofill,
 input:-webkit-autofill:where(:hover, :focus, :active){
   -webkit-box-shadow: inset 0 0 0 30px var(--autofill-bg) !important;
   -webkit-text-fill-color: var(--autofill-color) !important;  
-}`
+}
